@@ -8,7 +8,7 @@ body {
   background-color: black;
   width: 100vw;
   height: 100vh;
-  display: none;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
@@ -18,7 +18,7 @@ body {
 }
 
 .ai {
-  display: block;
+  display: none;
   height: 100vh;
 }
 
@@ -172,4 +172,5 @@ body {
 
 .cl-btn::after {
   content: "x";
+
 }
