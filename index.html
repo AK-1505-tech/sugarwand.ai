@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SugarWand.AI</title>
+    <link rel="icon" href="./favicon.ico">
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./inputs.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="login" id="loginWin">
+      <div class="center">
+      <div class="form-control">
+        <input type="text" id="un"required="">
+          <label>
+            <span style="transition-delay:0ms">U</span>
+            <span style="transition-delay:50ms">s</span>
+            <span style="transition-delay:100ms">e</span>
+            <span style="transition-delay:150ms">r</span>
+            <span style="transition-delay:200ms">n</span>
+            <span style="transition-delay:250ms">a</span>
+            <span style="transition-delay:300ms">m</span>
+            <span style="transition-delay:350ms">e</span>
+          </label>
+      </div>
+      <div class="form-control">
+        <input type="password" id="pw"required="">
+          <label>
+            <span style="transition-delay:0ms">P</span>
+            <span style="transition-delay:50ms">a</span>
+            <span style="transition-delay:100ms">s</span>
+            <span style="transition-delay:150ms">s</span>
+            <span style="transition-delay:200ms">w</span>
+            <span style="transition-delay:250ms">o</span>
+            <span style="transition-delay:300ms">r</span>
+            <span style="transition-delay:350ms">d</span>
+          </label>
+      </div>
+      <b onclick="vali()">Log In!</b>
+      </div>
+    </div>
+
+    <div class="load" id="loadWin">
+      <img id="load">
+    </div>
+
+    <div class="ai" id="ai">
+
+    <div class="intro">
+      <h1 style='font-family: "Tangerine", cursive;font-weight: 700;font-style: normal;'>SugarWand . Ai</h1>
+      <button class="st" onclick="openS()"><img src="./setting.png"></button>
+    </div>
+
+    <div class="chat" id="viewchat"></div>
+
+    <footer class="form">
+      <input type="text" id="message" placeholder="Harry - Harry Potter">
+      <button id="sendBtn" onclick="sendUser()">
+        <img src="send-message.png" alt="Send" width="32">
+      </button>
+    </footer>
+
+    <div class="overlay-container" id="mode-alert">
+      <div class="centered-content" style="width: 250px; height: 250px; background-color: beige; border: 5px solid cadetblue; border-radius: 10px;">
+        <button class="cl-btn" onclick="closeMA()"></button>
+        <div class="ribbon">Preview Mode</div>
+        <br><br><br><br><br>
+        <p>Hi! You are currently in <br><br><span class="su">Preview Mode</span>. It is free. You <br><br>can send maximum <span class="su">3</span> messages <br><br>per day.</p>
+      </div>
+    </div>
+
+    <div class="overlay-container" id="settings" style="display: none;">
+      <div class="centered-content">
+        <button class="cl-btn" onclick="closeS()"></button>
+        <!--<form name="setc">-->
+          <div class="radio-container">
+            <input checked="" id="radio-1" name="radio" type="radio" value=0>
+             <label for="radio-1">Harry Potter</label>
+            <input id="radio-2" name="radio" type="radio" value=1>
+              <label for="radio-2">Greg Heffley</label>
+            <input id="radio-3" name="radio" type="radio" value=2>
+              <label for="radio-3">James Bond</label>
+            <input id="radio-4" name="radio" type="radio" value=3>
+              <label for="radio-4">Spider Man</label>
+            <input id="radio-5" name="radio" type="radio" value=4>
+              <label for="radio-5">Captain America</label>
+            <input id="radio-6" name="radio" type="radio" value=5>
+              <label for="radio-6">Iron Man</label>
+            <input id="radio-7" name="radio" type="radio" value=6>
+              <label for="radio-7">Wolverine</label>
+            <input id="radio-8" name="radio" type="radio" value=7>
+              <label for="radio-8">Black Panther</label>
+            <input id="radio-9" name="radio" type="radio" value=8>
+              <label for="radio-9">Thor</label>
+            <div class="glider-container">
+              <div class="glider"></div>
+            </div>
+          </div>
+          <input type="submit" class="su" onclick="change()" style="left: 17px; position: relative;" value="SET">
+        <!--</form>-->
+      </div>
+    </div>
+    </div>
+<div class="button-container" id="badge">
+  <button class="brutalist-button openai">
+    <div class="openai-logo">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        class="openai-icon"
+      >
+        <path
+          fill="cadetblue"
+          d="M20.616 10.835a14.147 14.147 0 01-4.45-3.001 14.111 14.111 0 01-3.678-6.452.503.503 0 00-.975 0 14.134 14.134 0 01-3.679 6.452 14.155 14.155 0 01-4.45 3.001c-.65.28-1.318.505-2.002.678a.502.502 0 000 .975c.684.172 1.35.397 2.002.677a14.147 14.147 0 014.45 3.001 14.112 14.112 0 013.679 6.453.502.502 0 00.975 0c.172-.685.397-1.351.677-2.003a14.145 14.145 0 013.001-4.45 14.113 14.113 0 016.453-3.678.503.503 0 000-.975 13.245 13.245 0 01-2.003-.678z"
+        ></path>
+      </svg>
+    </div>
+    <div class="button-text">
+      <span>Powered By</span>
+      <span>Gemini-2.0</span>
+    </div>
+  </button>
+</div>
+
+    <!-- Gemini chat script -->
+    <script type="module" src="index.js"></script>
+  </body>
+</html>
