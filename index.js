@@ -71,7 +71,42 @@ window.sendUser = async function () {
   } catch (err) {
     console.error(err);
     loading.classList.remove("loading");
-    loading.textContent = "⚠️ Error generating response.";
+    // Surface a short, user-friendly error message (helps when debugging on GH Pages)
+    const msg = (err && err.message) ? err.message : String(err);
+    loading.textContent = "⚠️ Error generating response: " + msg;
+
+    // Build a detailed error block for debugging (stack, response details)
+    try {
+      let details = '';
+      if (err && err.stack) details += err.stack + '\n';
+      // Some libraries attach a `response` or `status` on the error
+      if (err && err.response) {
+        const r = err.response;
+        if (r.status) details += 'Response status: ' + r.status + '\n';
+        try {
+          details += 'Response body: ' + JSON.stringify(r, null, 2) + '\n';
+        } catch (e) {
+          details += 'Response body: (unserializable)\n';
+        }
+      }
+      if (!details) details = msg;
+
+      const pre = document.createElement('pre');
+      pre.className = 'error-details';
+      pre.textContent = details;
+      pre.style.whiteSpace = 'pre-wrap';
+      pre.style.background = '#111';
+      pre.style.color = '#fff';
+      pre.style.padding = '8px';
+      pre.style.borderRadius = '6px';
+      pre.style.marginTop = '6px';
+      // Append the details after the loading/error message so the user can copy it
+      chat.appendChild(pre);
+      chat.scrollTop = chat.scrollHeight;
+    } catch (e) {
+      // If anything goes wrong building the debug block, still keep the primary message
+      console.error('Failed to render error details', e);
+    }
   } finally {
     // Re-enable input and focus
     input.disabled = false;
@@ -136,5 +171,4 @@ window.vali = async function () {
   if (document.getElementById("un").value === "the_witch" && document.getElementById("pw").value === "7177") {
     load();
   }
-
 }
