@@ -169,8 +169,9 @@ function startAI() {
 
 window.vali = async function () {
   if (document.getElementById("un").value === "the_witch" && document.getElementById("pw").value === "7177") {
-    load();
+    startAI();
   }
 }
+
 
 
