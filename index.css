@@ -17,10 +17,6 @@ body {
   position: relative;
 }
 
-@media only screen and (max-width: 480px) {
-  font-size: 25px;
-}
-
 .ai {
   display: none;
   height: 100vh;
@@ -174,6 +170,92 @@ body {
 
 }
 
+/* --- Mobile Styling --- */
+@media only screen and (max-width: 600px) {
+  body {
+    font-size: 16px;
+  }
 
+  .login {
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .login .center {
+    width: 90vw;
+    max-width: 95vw;
+    min-width: unset;
+  }
 
+  .intro {
+    flex-direction: column;
+    padding: 8px;
+  }
 
+  .intro h1 {
+    font-size: 1.4em;
+    width: 100%;
+    margin: 0 0 6px 0;
+  }
+
+  .chat {
+    padding: 6px;
+    font-size: 1em;
+  }
+
+  .form {
+    flex-direction: column;
+    gap: 6px;
+    height: auto;
+    padding: 7px;
+    position: fixed;
+    width: 100vw;
+    left: 0;
+    bottom: 0;
+    z-index: 10;
+    box-sizing: border-box;
+  }
+
+  .form input {
+    font-size: 16px;
+    padding: 7px;
+  }
+
+  .form button {
+    width: 100%;
+    font-size: 1em;
+    padding: 8px 0;
+  }
+
+  .su, .sc {
+    max-width: 90%;
+    font-size: 1em;
+    padding: 6px 8px;
+    margin: 7px;
+  }
+
+  .st img {
+    width: 13vw;
+    min-width: 32px;
+    max-width: 50px;
+    padding-top: 4px;
+  }
+
+  .overlay-container {
+    padding: 10px;
+  }
+
+  .centered-content {
+    padding: 10px;
+    width: 90vw;
+  }
+
+  .cl-btn {
+    width: 22px;
+    height: 22px;
+    font-size: 13px;
+    top: 2px;
+    right: 2px;
+  }
+}
