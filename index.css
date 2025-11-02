@@ -23,16 +23,10 @@ body {
 }
 
 .load {
-  display: none;
-  background-color: white;
-  width: 100vw;
-  height: 100vh;
-}
-
-.load img {
-    position: absolute;
-    left: 30%;
-    top: 9%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
 }
 
 .intro {
@@ -174,3 +168,4 @@ body {
   content: "x";
 
 }
+
