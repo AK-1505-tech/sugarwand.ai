@@ -1,3 +1,61 @@
+/* From Uiverse.io by alexs_8179 */ 
+.container {
+  background-color: #17afbd;
+}
+@keyframes bounce {
+  0%,
+  100% {
+    translate: 0px 36px;
+  }
+  50% {
+    translate: 0px 46px;
+  }
+}
+@keyframes bounce2 {
+  0%,
+  100% {
+    translate: 0px 46px;
+  }
+  50% {
+    translate: 0px 56px;
+  }
+}
+
+@keyframes umbral {
+  0% {
+    stop-color: #10bcd32e;
+  }
+  50% {
+    stop-color: #2fcad8;
+  }
+  100% {
+    stop-color: #10d3982e;
+  }
+}
+@keyframes partciles {
+  0%,
+  100% {
+    translate: 0px 16px;
+  }
+  50% {
+    translate: 0px 6px;
+  }
+}
+#particles {
+  animation: partciles 4s ease-in-out infinite;
+}
+#animatedStop {
+  animation: umbral 4s infinite;
+}
+#bounce {
+  animation: bounce 4s ease-in-out infinite;
+  translate: 0px 36px;
+}
+#bounce2 {
+  animation: bounce2 4s ease-in-out infinite;
+  translate: 0px 46px;
+  animation-delay: 0.5s;
+}
 
 /* From Uiverse.io by liyaxu123 */ 
 .form-control {
@@ -395,3 +453,4 @@ b:active {
   transform: translateY(2px);
   box-shadow: none;
 }
+
