@@ -142,7 +142,7 @@ function delay(milliseconds) {
 }
 
 window.load = async function () {
-  document.getElementById("loadWin").style.display = "block";
+  document.getElementById("loadWin").style.display = "flex";
   document.getElementById("loginWin").style.display = "none";
   document.getElementById("badge").style.display = "none";
   await delay(7000)
@@ -159,6 +159,7 @@ window.vali = async function () {
     load();
   }
 }
+
 
 
 
