@@ -145,20 +145,7 @@ window.load = async function () {
   document.getElementById("loadWin").style.display = "block";
   document.getElementById("loginWin").style.display = "none";
   document.getElementById("badge").style.display = "none";
-  let loadCount = 0;
-  while (loadCount < 3) {
-  let frame = 1
-  while (frame < 10) {
-    await delay(1000)
-    document.getElementById("load").setAttribute("src","./load/ezgif-frame-00"+String(frame)+".jpg")
-    frame+=1;
-  }
-  await delay(1000)
-  document.getElementById("load").setAttribute("src","./load/ezgif-frame-0"+String(frame)+".jpg")
-  frame +=1
-  loadCount+=1;
-  }
-  await delay(500)
+  await delay(7000)
   startAI()
 }
 
@@ -169,9 +156,10 @@ function startAI() {
 
 window.vali = async function () {
   if (document.getElementById("un").value === "the_witch" && document.getElementById("pw").value === "7177") {
-    startAI();
+    load();
   }
 }
+
 
 
 
