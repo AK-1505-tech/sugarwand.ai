@@ -17,6 +17,10 @@ body {
   position: relative;
 }
 
+@media only screen and (max-width: 480px) {
+  font-siz: 25px;
+}
+
 .ai {
   display: none;
   height: 100vh;
@@ -169,5 +173,6 @@ body {
   content: "x";
 
 }
+
 
 
