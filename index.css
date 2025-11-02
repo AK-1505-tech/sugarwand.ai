@@ -18,7 +18,7 @@ body {
 }
 
 @media only screen and (max-width: 480px) {
-  font-siz: 25px;
+  font-size: 25px;
 }
 
 .ai {
@@ -173,6 +173,7 @@ body {
   content: "x";
 
 }
+
 
 
 
