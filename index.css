@@ -27,6 +27,7 @@ body {
   justify-content: center;
   align-items: center;
   background-color: black;
+  height: 100vh;
 }
 
 .intro {
@@ -168,4 +169,5 @@ body {
   content: "x";
 
 }
+
 
