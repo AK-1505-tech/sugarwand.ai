@@ -23,7 +23,7 @@ body {
 }
 
 .load {
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   background-color: black;
@@ -259,3 +259,4 @@ body {
     right: 2px;
   }
 }
+
