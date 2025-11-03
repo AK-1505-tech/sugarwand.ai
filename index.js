@@ -2,7 +2,7 @@
 import { GoogleGenerativeAI } from "https://esm.run/@google/generative-ai";
 
 // ⚠️ Replace with your real Gemini API key
-const ai = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
+const ai = new GoogleGenerativeAI("AIzaSyDnRMJiwB_G7PNjQlKiKvJSHLX52iRlm0Y");
 
 const characters = [
   "Imagine you are Harry Potter and reply to this : ",
@@ -159,6 +159,7 @@ window.vali = async function () {
     load();
   }
 }
+
 
 
 
